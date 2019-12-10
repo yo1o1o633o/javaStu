@@ -5,6 +5,7 @@ import java.time.LocalDate;
 /**
  * 类示例
  * */
+// 一个源文件只能有一个共有类. 即public修饰. 如果给EmployeeClass类加public 就会报错
 public class Employee {
     public static void main(String[] args) {
         // 创建一个EmployeeClass类类型数组,长度3
@@ -45,8 +46,11 @@ class EmployeeClass {
     public LocalDate getHireDay() {
         return hireDay;
     }
+    // 此处方法只有1个入参. 叫做显示参数. 实际还有一个隐式参数 用关键字this表示
     public void raiseSalary(double byPercent) {
         double raise = salary * byPercent / 100;
+        // 也可以写成这样this. 可以很好区分实例域和局部变量
+        // double raise = this.salary * byPercent / 100;
         salary += raise;
     }
 }
