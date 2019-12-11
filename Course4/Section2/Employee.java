@@ -27,7 +27,9 @@ public class Employee {
 
 
 class EmployeeClass {
-    private String name;
+    // private意义: 这个参数只能是该类的对象进行操作. 这个例子中salary的值只能获取. 或者通过这个类的方法raiseSalary来设置.
+    // name 在构造器中设置后, 就不会再改变. 没有提供对这个值的修改方法. 那么只要构造时初始化了,就再也不会被改变
+    private final String name;
     private double salary;
     private LocalDate hireDay;
     // 和类名相同, 构造函数
@@ -38,8 +40,14 @@ class EmployeeClass {
     }
 
     public String getName() {
-        return name;
+        return doubleName(name);
     }
+
+    // name为final修饰. 当对象构造之后无法对其进行赋值
+    // public void setName(String newName) {
+    //      name = newName;
+    // }
+
     public double getSalary() {
         return salary;
     }
@@ -52,5 +60,11 @@ class EmployeeClass {
         // 也可以写成这样this. 可以很好区分实例域和局部变量
         // double raise = this.salary * byPercent / 100;
         salary += raise;
+    }
+
+    // 私有方法: 当此方法只在当前类内使用时.设为私有.当业务复杂时,没有用处的私有方法可以放心的删除, 而公有方法, 就要考虑其他业务调用问题而不能轻易改动
+    private String doubleName(String name) {
+        name = name + "!";
+        return name;
     }
 }
