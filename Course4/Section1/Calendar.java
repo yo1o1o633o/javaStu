@@ -5,7 +5,7 @@ import java.time.LocalDate;
 /**
  * 打印当前月份的日历
  * */
-public class calendar {
+public class Calendar {
     public static void main(String[] args) {
         LocalDate date = LocalDate.now();
         // 当前月份12
