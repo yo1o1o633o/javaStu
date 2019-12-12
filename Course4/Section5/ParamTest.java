@@ -1,5 +1,8 @@
 package Course4.Section5;
 
+/**
+ * 方法传参
+ * */
 public class ParamTest {
     public static void main(String[] args) {
         /**
