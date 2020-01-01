@@ -11,7 +11,7 @@ public class ArrayListTest {
         employees.add(new Employee("Yang", 2000, 1700, 10, 15));
         employees.add(new Employee("Li", 3000, 1700, 10, 15));
 
-        // 将数组列表得存储容量消减到当前尺寸
+        // 将数组列表的存储容量消减到当前尺寸
         employees.trimToSize();
 
         // 元素数量
