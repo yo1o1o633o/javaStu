@@ -74,5 +74,10 @@ public class BasicDataTypeDemo {
         System.out.println(eChar);  //
         System.out.println(fChar);  // ㌳
         System.out.println(gChar);  // ＼
+
+        // 特殊常量
+        System.out.println(Double.POSITIVE_INFINITY);       // Infinity  正无穷大
+        System.out.println(Double.NEGATIVE_INFINITY);       // -Infinity 负无穷大
+        System.out.println(Double.NaN);                     // NaN       不是一个数字
     }
 }
